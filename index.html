@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="main" style="width: 500px; margin: 0 auto">
+    <h3>Type anything slowly</h3>
+    <form action="">
+        <textarea name="" id="textarea" cols="60" rows="10" oninput="typing()"></textarea>
+    </form>
+
+</div>
+
+<script>
+    let letter = 'I am stupid!';
+    let arrayLetter = letter.split('');
+    let str='';
+    let i =0;
+    console.log(arrayLetter[0])
+    function typing () {
+        if (i==arrayLetter.length){
+            str = '';
+            i = 0;
+        }
+        else {
+            str+=arrayLetter[i];
+            i++;
+        }
+        document.getElementById('textarea').value = str;
+    }
+</script>
+</body>
+</html>
